@@ -1,0 +1,12 @@
+[
+  {
+    "ContainingType": "GameLogParser.Controllers.LogParserController",
+    "Method": "Index",
+    "RelativePath": "LogParser",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
