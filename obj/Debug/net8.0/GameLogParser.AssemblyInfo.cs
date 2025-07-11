@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GameLogParser")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b0cdeaa64e4d8d815ef0d7e4df244855d4716b71")]
 [assembly: System.Reflection.AssemblyProductAttribute("GameLogParser")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GameLogParser")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
