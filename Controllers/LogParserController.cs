@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using GameLogParser.Services;
+using Microsoft.AspNetCore.Mvc;
 
 namespace GameLogParser.Controllers
 {
@@ -6,10 +7,18 @@ namespace GameLogParser.Controllers
     [Route("[controller]")]
     public class LogParserController : ControllerBase
     {
-       
-        public IActionResult Index()
+        private readonly LogParserService _parser;
+
+        public LogParserController()
         {
-            return Ok("Ok");
+            _parser = new LogParserService();
+        }
+
+        [HttpGet]
+        public IActionResult Get()
+        {
+            var result = _parser.Parse();
+            return Ok(result);
         }
     }
 }
