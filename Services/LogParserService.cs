@@ -1,12 +1,20 @@
-﻿using GameLogParser.Models;
+﻿using GameLogParser.Interfaces;
+using GameLogParser.Models;
+using Microsoft.Extensions.Options;
 
 namespace GameLogParser.Services
 {
 
-    public class LogParserService
+    public class LogParserService : ILogParserService
     {
-        private readonly string _logPath = "games.log";
+        private readonly string? _logPath;
+        private readonly IConfiguration _configuration;
 
+        public LogParserService(IConfiguration configuration)
+        {
+            _configuration = configuration;
+            _logPath = _configuration["logPath"];
+        }
         public List<GameLog> Parse()
         {           
 

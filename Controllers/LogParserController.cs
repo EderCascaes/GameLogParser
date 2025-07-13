@@ -1,4 +1,5 @@
-﻿using GameLogParser.Services;
+﻿using GameLogParser.Interfaces;
+using GameLogParser.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GameLogParser.Controllers
@@ -7,11 +8,11 @@ namespace GameLogParser.Controllers
     [Route("[controller]")]
     public class LogParserController : ControllerBase
     {
-        private readonly LogParserService _parser;
+        private readonly ILogParserService _parser;
 
-        public LogParserController()
+        public LogParserController(ILogParserService parser)
         {
-            _parser = new LogParserService();
+            this._parser = parser;
         }
 
         [HttpGet]
